@@ -35,7 +35,7 @@ jobs:
           REPO: ${{github.repository}}
           COMMIT: ${{github.sha}}
         run: ./scripts/release.sh
-      - name: test
+      - name: Test
         run: npm run test
       - name: Build
         run: yarn build
