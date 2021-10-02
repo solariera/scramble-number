@@ -1,5 +1,5 @@
 import { tests, TestData } from '@solariera/easy-jest/lib';
-import { positive32bit as fn } from '../positive32bit';
+import { trim32bit as fn } from '../trim32bit';
 
 const data: TestData<typeof fn>[] = [
   { id: 'input 0x1ca7bc5b', params: [0x1ca7bc5b], ret: 0x1ca7bc5b },

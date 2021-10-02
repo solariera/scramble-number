@@ -1,10 +1,10 @@
-# Template NPM Package
+# Scramble Number
 
-[![npm](https://img.shields.io/npm/v/@solariera/template-npm-package)](https://www.npmjs.com/package/@solariera/template-npm-package)
-[![npm](https://img.shields.io/npm/dw/@solariera/template-npm-package)](https://www.npmjs.com/package/@solariera/template-npm-package)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@solariera/template-npm-package)](https://bundlephobia.com/result?p=@solariera/template-npm-package)
+[![npm](https://img.shields.io/npm/v/@solariera/scramble-number)](https://www.npmjs.com/package/@solariera/scramble-number)
+[![npm](https://img.shields.io/npm/dw/@solariera/scramble-number)](https://www.npmjs.com/package/@solariera/scramble-number)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@solariera/scramble-number)](https://bundlephobia.com/result?p=@solariera/scramble-number)
 
-This is npm package template
+This package generates a scrambled number.
 
 ## 1. Usage
 
@@ -12,30 +12,35 @@ This is npm package template
 
 ```console
 # npm
-npm install @solariera/template-npm-package
+npm install @solariera/scramble-number
 ```
 
 ```console
 # yarn
-yarn add @solariera/template-npm-package
+yarn add @solariera/scramble-number
 ```
 
 ### 1-2. Basic Usage
 
 ```typescript
-import { template } from '@solariera/template-npm-package';
+import { scramble, generateSalt } from '@solariera/scramble-number';
 
-const temp = template();
-console.log(temp); // template
+const [salt, _salt] = generateSalt();
+
+const scrambled = [0, 1, 2, 3, 4].map((num) => scramble(num, salt, _salt));
+
+console.log(scrambled);
+// e.g. [1219901536, 239563430, 953425272, 1286381126, 1451104176]
 ```
 
 ## 2. Specifications
 
 ### 2-1. Syntax & Parameters
 
-#### template(`first` [, `second`])
+#### scramble(`value`, `salt`, `inversedSalt`)
 
-| No. | Name     | Type   | Required | Description |
-| --- | -------- | ------ | :------: | ----------- |
-| 1   | `first`  | string |   Yes    | hogehoge    |
-| 2   | `second` | object |          | fugafuga    |
+| No. | Name           | Type   | Required | Description    |
+| --- | -------------- | ------ | :------: | -------------- |
+| 1   | `value`        | number |   Yes    | Original Value |
+| 1   | `salt`         | number |   Yes    | Salt           |
+| 2   | `inversedSalt` | number |   Yes    | Inversed Salt  |

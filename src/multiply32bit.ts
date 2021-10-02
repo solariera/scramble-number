@@ -1,4 +1,4 @@
-import { positive32bit } from './positive32bit';
+import { trim32bit } from './trim32bit';
 export const multiply32bit = (v: number, salt: number): number => {
-  return positive32bit(v * salt);
+  return trim32bit(v * salt);
 };

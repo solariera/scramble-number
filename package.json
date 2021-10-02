@@ -1,21 +1,21 @@
 {
   "name": "@solariera/scramble-number",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Npm package template",
   "author": "Solariera <always@solariera.com> (https://github.com/solariera)",
   "license": "MIT",
   "keywords": [
-    "template",
-    "npm",
-    "package"
+    "scramble",
+    "number",
+    "typescript"
   ],
-  "homepage": "https://github.com/solariera/template-npm-package#readme",
+  "homepage": "https://github.com/solariera/scramble-number#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solariera/template-npm-package.git"
+    "url": "git+https://github.com/solariera/scramble-number.git"
   },
   "bugs": {
-    "url": "https://github.com/solariera/template-npm-package/issues"
+    "url": "https://github.com/solariera/scramble-number/issues"
   },
   "publishConfig": {
     "access": "public"
